@@ -1,0 +1,41 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:Tahoma;
+	font-size:14pt;
+	line-height:1.5;
+	color:while;
+}
+label{
+	display:block;
+}
+form{
+	width:100%;
+	background-color:grey;
+	max-width:500px;
+	padding:10px;
+}
+.form-control{
+	text-align:auto;
+	width:99%;
+	margin:5px 0px;
+}
+#title{
+	text-transform:uppercase;
+	text-align:center;
+	letter-spacing:6px;
+	font-size:32px;
+}
+.button{
+	background-color:;
+	padding:3px;
+	width:80px;
+}
+.container{
+	justify-content:center;
+	align-items:center;
+	display: flex;
+}
+.form-group{
+	padding:10px;
+}
