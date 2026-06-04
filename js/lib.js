@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <title>thong tin sinh vien</title>
-    </head>
-    <body>
-        <a></a>
-    </body>
-</html>
+/*Viết mã Javascript*/
+function printBCC(n)
+{
+    let result = "";
+
+    let i = 1;
+    while(i<=10)
+    {
+        result += `${n} x ${i} = ${num*i} <br>`; 
+        i++;
+    }
+    //Đưa kết quả vào thẻ div có id là "result"
+    document.getElementById("result").innerHTML = result;
+}

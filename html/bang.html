@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>hóa đơn thanh toán</title>
+        <meta charset="UTF-8">
+        <link rel="slylesheet" href="../css/style3.css"
+    </head>
+    <body>
+        <table border="2">
+            <tr>
+                <th>STT</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Đơn Giá</th>
+                <th>Số Lượng</th>
+                <th>Đơn vị tính</th>
+                <th>Thành tiền</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>A</td>
+                <td class="dongia">50</td>
+                <td class="soluong">10</td>
+                <td>Thùng</td>
+                <td class="thanhtien"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>B</td>
+                <td class="dongia">70</td>
+                <td class="soluong">20</td>
+                <td>Bao</td>
+                <td class="thanhtien"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>C</td>
+                <td class="dongia">50</td>
+                <td class="soluong">30</td>
+                <td>Túi</td>
+                <td class="thanhtien"></td>
+            </tr>
+            <tr>
+                <td colspan="5">Tổng thanh toán</td>
+                <td id="thanhtoan">0</td>
+            </tr>
+        </table>
+        <script>
+            const soluong=document.getElementsByClassName("soluong")
+            const dongia=document.getElementsByClassName("dongia")
+            const thanhtien=document.getElementsByClassName("thanhtien")
+            let i=0;
+            let tongthanhtoan=0;
+            while(i<soluong.length)
+        {
+            thanhttien[i].innerHTML= Number(soluong[i].innerHTML) * Number(dongia[i].innerHTML);
+            tongthanhtoan += Number(thanhtien[i].innerHTML);
+            i++;
+        }
+        document.getElementById("thanhtoan").innerHTML= tongthanhtoan;
+ </script>
+    </body>
+</html>
