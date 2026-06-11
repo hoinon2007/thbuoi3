@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
-        <title>hóa đơn thanh toán</title>
-        <meta charset="UTF-8">
-        <link rel="slylesheet" href="../css/style3.css"
-    </head>
-    <body>
+     <head>
+           <title>Thiết kế Web</title>
+           <meta charset= "UTF-8" />
+           <link rel="stylesheet" href="../css/style2.css">
+     </head>
+     <body>
+        <h2>Hóa đơn thanh toán</h2>
         <table border="2">
             <tr>
                 <th>STT</th>
-                <th>Tên Sản Phẩm</th>
-                <th>Đơn Giá</th>
-                <th>Số Lượng</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
                 <th>Đơn vị tính</th>
                 <th>Thành tiền</th>
             </tr>
@@ -31,7 +32,7 @@
                 <td>Bao</td>
                 <td class="thanhtien"></td>
             </tr>
-            <tr>
+             <tr>
                 <td>3</td>
                 <td>C</td>
                 <td class="dongia">50</td>
@@ -41,22 +42,28 @@
             </tr>
             <tr>
                 <td colspan="5">Tổng thanh toán</td>
+                <!-- ĐÃ SỬA: Đổi class="thanhtoan" thành id="thanhtoan" để khớp với JavaScript -->
                 <td id="thanhtoan">0</td>
             </tr>
         </table>
+        
         <script>
-            const soluong=document.getElementsByClassName("soluong")
-            const dongia=document.getElementsByClassName("dongia")
-            const thanhtien=document.getElementsByClassName("thanhtien")
-            let i=0;
-            let tongthanhtoan=0;
-            while(i<soluong.length)
-        {
-            thanhttien[i].innerHTML= Number(soluong[i].innerHTML) * Number(dongia[i].innerHTML);
-            tongthanhtoan += Number(thanhtien[i].innerHTML);
-            i++;
-        }
-        document.getElementById("thanhtoan").innerHTML= tongthanhtoan;
- </script>
+            const soluong = document.getElementsByClassName("soluong");
+            const dongia = document.getElementsByClassName("dongia");
+            const thanhtien = document.getElementsByClassName("thanhtien");
+
+            let i = 0;
+            let tongthanhtoan = 0;
+
+            while(i < soluong.length) {
+                thanhtien[i].innerHTML = Number(soluong[i].innerHTML) * Number(dongia[i].innerHTML);
+                // ĐÃ SỬA: Đổi từ thanhtoan thành tongthanhtoan cho đúng tên biến đã khai báo
+                tongthanhtoan += Number(thanhtien[i].innerHTML);
+                i++;
+            }
+            
+            // Lệnh này giờ sẽ chạy đúng vì id="thanhtoan" đã có ở trên bảng HTML
+            document.getElementById("thanhtoan").innerHTML = tongthanhtoan;
+        </script>
     </body>
-</html>
+</html> <!-- ĐÃ SỬA: Đổi từ </thml> thành </html> -->

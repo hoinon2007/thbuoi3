@@ -6,7 +6,7 @@ function printBCC(n)
     let i = 1;
     while(i<=10)
     {
-        result += `${n} x ${i} = ${num*i} <br>`; 
+        result += `${n} x ${i} = ${n*i} <br>`; 
         i++;
     }
     //Đưa kết quả vào thẻ div có id là "result"
